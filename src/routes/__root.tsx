@@ -91,13 +91,13 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-const NAV = [
+const NAV: Array<{ to: string; label: string; icon: typeof Home; primary?: boolean }> = [
   { to: "/", label: "Home", icon: Home },
   { to: "/feed", label: "Feed", icon: Rss },
   { to: "/report", label: "Report", icon: Plus, primary: true },
   { to: "/map", label: "Map", icon: MapIcon },
   { to: "/my-reports", label: "Mine", icon: ClipboardList },
-] as const;
+];
 
 function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
