@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Plus } from "lucide-react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import { useReports, categoryMeta, statusLabel, seedCenter, categories, type Category, type Status } from "@/lib/civic-store";
 
 export const Route = createFileRoute("/map")({
@@ -71,10 +73,6 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
 }
 
 function LeafletMap({ reports }: { reports: ReturnType<typeof useReports> }) {
-  // Lazy imports — leaflet is browser-only.
-  const { MapContainer, TileLayer, Marker, Popup } = require("react-leaflet") as typeof import("react-leaflet");
-  const L = require("leaflet") as typeof import("leaflet");
-
   const colorFor = (s: string) =>
     s === "resolved" ? "#7BC47F" : s === "in_progress" ? "#D8D365" : "#E6F082";
 

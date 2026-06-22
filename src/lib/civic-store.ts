@@ -117,12 +117,15 @@ function persist() {
   if (profileCache) localStorage.setItem(PROFILE_KEY, JSON.stringify(profileCache));
 }
 
+const EMPTY_REPORTS: Report[] = [];
+const EMPTY_PROFILE: Profile = { id: "guest", name: "Active Citizen", xp: 0 };
+
 export function useReports() {
-  return useSyncExternalStore(subscribe, getReports, () => [] as Report[]);
+  return useSyncExternalStore(subscribe, getReports, () => EMPTY_REPORTS);
 }
 
 export function useProfile() {
-  return useSyncExternalStore(subscribe, getProfile, () => ({ id: "guest", name: "Active Citizen", xp: 0 }) as Profile);
+  return useSyncExternalStore(subscribe, getProfile, () => EMPTY_PROFILE);
 }
 
 export function addReport(input: Omit<Report, "id" | "createdAt" | "upvotes" | "status" | "authorId" | "authorName">) {
