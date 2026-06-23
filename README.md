@@ -1,9 +1,14 @@
 # CivicLink
+
 # TEAM : Developer Duo
+## Team members 
+Raag Shri (25BAI1O431)
+Vaibhavi Yadav (25BAI10516)
+
 
 > Spot a pothole, broken streetlight, overflowing bin, or hazard? Report it in 3 taps and track it to resolution.
 
-CivicLink is a mobile-first civic issue reporting web app built for a hackathon MVP. It runs entirely in the browser with `localStorage` persistence and seeded dummy data — no backend setup required to demo. It is designed to help citizens report local civic issues (such as potholes, broken streetlights, garbage accumulation, hazards, etc.) and track their resolution status.
+CivicLink is a mobile-first civic issue reporting web app . It runs entirely in the browser with `localStorage` persistence and seeded dummy data — no backend setup required to demo. It is designed to help citizens report local civic issues (such as potholes, broken streetlights, garbage accumulation, hazards, etc.) and track their resolution status.
 
 ## Features
 
@@ -36,30 +41,6 @@ CivicLink is a mobile-first civic issue reporting web app built for a hackathon 
 
 All colors are exposed as semantic tokens in `src/styles.css` — never hardcode hex values in components.
 
-## Getting started (VS Code)
-
-Prerequisites: **[Bun](https://bun.sh)** (recommended) or Node 20+.
-
-```bash
-# 1. Clone (via the GitHub button in Lovable → Connect → clone)
-git clone <your-repo-url>
-cd civiclink
-
-# 2. Install dependencies
-bun install
-
-# 3. Start the dev server
-bun run dev
-```
-
-### Scripts
-
-| Command | What it does |
-| --- | --- |
-| `bun run dev` | Start Vite dev server with HMR |
-| `bun run build` | Production build |
-| `bun run start` | Preview the production build |
-
 ## Project structure
 
 ```text
@@ -79,11 +60,6 @@ src/
 ```
 
 ## Notes
+- This is a **frontend-only MVP** — no auth, no real database. 
 
-- This is a **frontend-only MVP** — no auth, no real database. Perfect for a hackathon demo.
-- To clear seeded data, run `localStorage.clear()` in the browser console and refresh.
-- To upgrade to a real backend (Postgres, auth, file storage), enable **Lovable Cloud** from the chat — the `civic-store.ts` layer can be swapped for live queries without touching the routes.
 
-## Team members 
-Raagshri (25BAI1O431)
-Vaibhavi Yadav (25BAI10516)
