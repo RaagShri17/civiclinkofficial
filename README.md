@@ -60,6 +60,7 @@ src/
 ```
 
 ## Notes
-- This is a **frontend-only MVP** — no auth, no real database. 
+- This is a **frontend-only MVP** — no auth, no real database.
+- Use on Mobile for Better Experience.
 
 
